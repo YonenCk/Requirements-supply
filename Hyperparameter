@@ -1,0 +1,24 @@
+Input window: 10 trading days
+Daily features: 40
+Input shape: (10, 40)
+Bidirectional LSTM: 32 units per direction
+Bi-LSTM output dimension: 64
+Second LSTM layer: 16 units
+Dropout rate: 0.3
+Kernel L2 regularization: 1e-4
+Recurrent L2 regularization: 1e-4
+Output layer: Dense(4), sigmoid activation
+Optimizer: Adam
+Initial learning rate: 0.001
+Loss function: Binary cross-entropy
+Maximum epochs: 50
+Batch size: 32
+Early stopping: val_loss, patience = 8
+Learning-rate reduction: val_loss, patience = 4, factor = 0.5
+Minimum learning rate: 1e-5
+Feature scaling: StandardScaler fitted on training data only
+Dataset split: 60% training, 20% validation, 20% testing
+Data splitting method: Chronological order
+Sentiment alignment: Previous trading day's sentiment
+Classification thresholds: Selected per stock on the validation set
+Random seeds: 0, 1, 2, 3, and 4
